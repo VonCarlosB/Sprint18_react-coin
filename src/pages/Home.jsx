@@ -12,7 +12,6 @@ function Home () {
     try {
       if(!res.ok) throw new Error('No se ha podido acceder')
       const data = await res.json()
-    console.log(data.data)
       setCoins(data.data)
     } catch (err) {
       console.log(err)
@@ -25,12 +24,11 @@ function Home () {
 
   return (
   <>
-    <ol>
+    <ol className="coinList">
     {coins.map(coin => {
       return (<li key={coin.id} >
       <Link to={`/coin/${coin.id}`}>
-        <h3>{coin.name}</h3>
-        <p>USD: {coin.priceUsd}$</p>
+        <h3>{coin.name} {coin.name != coin.symbol ? `/ ${coin.symbol}` : ''}</h3>
       </Link>    
       </li>)
     })}

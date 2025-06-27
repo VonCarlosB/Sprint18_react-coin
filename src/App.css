@@ -1,0 +1,42 @@
+nav{
+    margin: auto;
+    padding: 30px;
+    width: 50%;
+    min-width: 400px;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+nav a{
+    font-size: x-large;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+a{
+    color: black;
+}
+
+hr{
+    height: 2px;
+    background-color: black;
+}
+
+.coinList{
+    margin: 10px auto;
+    width: 95%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0 40px;
+}
+
+.coinList li{
+    width: 150px;
+    margin-bottom: 10px;
+}
+
+.coinList li:hover a{
+    color: red;
+}
