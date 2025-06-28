@@ -29,6 +29,21 @@ export default function Coin() {
         return Math.round((number + Number.EPSILON) * 100) / 100
     }
 
+    const saveCoin = () => {
+        const savedCoins = JSON.parse(localStorage.getItem('favCoins'))
+        if(savedCoins != null){
+            if(savedCoins.indexOf(coin.id) != -1){
+                localStorage.setItem('favCoins', JSON.stringify(
+                    savedCoins.filter(moneda => moneda !== coin.id)
+                ))
+            }else{
+                localStorage.setItem('favCoins', JSON.stringify([...savedCoins, coin.id]))
+            }
+        }else{
+            localStorage.setItem('favCoins', JSON.stringify([coin.id]))
+        }
+    }
+
     return(
         <>
             {coin && <>
@@ -41,6 +56,7 @@ export default function Coin() {
                     <p>Market Cap USD: {roundNumber(coin.marketCapUsd)}</p>
                     <p>Volume USD last 24h: {roundNumber(coin.volumeUsd24Hr)}</p>
                 </div>
+                <button onClick={() => saveCoin()}>Guardar</button>
             </>
             }
         </>
