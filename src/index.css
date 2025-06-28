@@ -1,4 +1,18 @@
 *{
     margin: 0;
     padding: 0;
+    font-family: monospace;
+}
+
+button{
+    width: 100px;
+    height: 40px;
+    background-color: white;
+    color: black;
+    border-radius: 10px;
+}
+
+button:hover{
+    background-color: rgb(240, 240, 240);
+    cursor: pointer;
 }

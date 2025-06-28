@@ -40,3 +40,28 @@ hr{
 .coinList li:hover a{
     color: red;
 }
+
+.coinInfo{
+    width: 50%;
+    margin: auto;
+    padding: 20px;
+}
+
+.coinInfo h3{
+    margin-top: 10px;
+}
+
+.extraInfo{
+    border: 1px solid black;
+    border-radius: 10px;
+    margin: 10px 0;
+    padding: 5px 15px;
+}
+
+.extraInfo h4{
+    margin-bottom: 10px;
+}
+
+.extraInfo p{
+    margin: 5px;
+}

@@ -46,18 +46,19 @@ export default function Coin() {
 
     return(
         <>
-            {coin && <>
+            {coin && <div className="coinInfo">
                 <h2>Name: {coin.name} / {coin.symbol}</h2>
                 <h3>Rank: {coin.rank}</h3>
                 <h3>Price: {roundNumber(coin.priceUsd)}$</h3>
                 <div className="extraInfo">
+                    <h4>Extra Info: </h4>
                     <p>Supply: {roundNumber(coin.supply)}</p>
                     <p>Max Supply: {roundNumber(coin.maxSupply)}</p>
                     <p>Market Cap USD: {roundNumber(coin.marketCapUsd)}</p>
                     <p>Volume USD last 24h: {roundNumber(coin.volumeUsd24Hr)}</p>
                 </div>
                 <button onClick={() => saveCoin()}>Guardar</button>
-            </>
+            </div>
             }
         </>
         
